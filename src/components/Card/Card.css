@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+.card {
+  width: 300px;
+  border-radius: 16px;
+  background: #1A1C23;
+  padding: 20px;
+  flex: 1 1 auto;
+  border: 1px solid #1A1C23;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+.card .personalData {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.card .personalData .photo {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 100%;
+  background-color: #12141B;
+}
+.card .personalData .photo img {
+  position: absolute;
+  inset: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.card .personalData .nameAndEmail {
+  padding: 2px 0;
+  overflow: hidden;
+  gap: 8px;
+  max-width: 70%;
+}
+.card .personalData .nameAndEmail .fullName {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .personalData .nameAndEmail .email {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .additionalData {
+  display: flex;
+  gap: 16px;
+}
+.card .additionalData .additionalDataKeys {
+  color: #8C8988;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.card .additionalData .additionalDataValues {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 70%;
+}
+.card .additionalData .additionalDataValues div {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active {
+  background: #1E2027;
+  border: 1px solid rgba(207, 123, 90, 0.2);
+}
+.active .fullName {
+  color: #CF7B5A;
+  font-size: 70px;
+}
+
+/*# sourceMappingURL=Card.css.map */

@@ -1,0 +1,84 @@
+@import '../../variables.scss';
+
+.card {
+  width: 300px;
+  border-radius: $indent-l;
+  background: $cardBackground;
+  padding: $indent-xl;
+  flex: 1 1 auto;
+  border: 1px solid $cardBackground;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+
+  .personalData {
+    display: flex;
+    gap: $indent-l;
+    margin-bottom: $indent-l;
+
+    .photo {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      overflow: hidden;
+      border-radius: 100%;
+      background-color: $rootBackground;
+
+      img {
+        position: absolute;
+        inset: 0;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .nameAndEmail {
+      padding: 2px 0;
+      overflow: hidden;
+      gap: 8px;
+      max-width: 70%;
+
+      .fullName {
+        @include cardFullNameText;
+        @include text-ellipsis;
+      }
+
+      .email {
+        @include text-ellipsis;
+      }
+    }
+  }
+
+  .additionalData {
+    display: flex;
+    gap: $indent-l;
+
+    .additionalDataKeys {
+      @include appGrayText;
+      @include cardAndStatisticsAdditionalData;
+      flex-shrink: 0;
+    }
+
+    .additionalDataValues {
+      @include cardAndStatisticsAdditionalData;
+      max-width: 70%;
+
+      div {
+        max-width: 100%;
+        @include text-ellipsis;
+      }
+    }
+  }
+}
+
+.active {
+  background: $activeCardBackground;
+  border: 1px solid #CF7B5A33;
+
+  .fullName {
+    @include activeCardFullNameText;
+    font-size: 70px;
+  }
+}
+

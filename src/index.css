@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+body {
+  background-color: #12141B;
+  padding: 32px;
+  overflow-y: hidden;
+}
+
+#root {
+  font-family: Jura, sans-serif;
+  color: #DCD8D3;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  background-color: #12141B;
+  min-height: 100vh;
+  letter-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button, input {
+  font-family: Jura, sans-serif;
+  color: #DCD8D3;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+.genderGroups h4 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.genderGroups .genderGroupsInfo {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.genderGroups .genderGroupsInfo .genders {
+  color: #8C8988;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.genderGroups .genderGroupsInfo .usersCount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/*# sourceMappingURL=GenderGroups.css.map */

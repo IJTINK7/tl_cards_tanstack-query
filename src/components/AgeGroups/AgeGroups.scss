@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.ageGroups {
+  h4 {
+    @include statisticsAgeGenderGroupsTitleText;
+    margin-bottom: $indent-l;
+  }
+
+  .ageGroupsInfo {
+    display: flex;
+    gap: $indent-l;
+    margin-bottom: $indent-l;
+
+    .ages {
+      @include appGrayText;
+      @include cardAndStatisticsAdditionalData;
+    }
+
+    .usersCount {
+      @include cardAndStatisticsAdditionalData;
+    }
+  }
+}

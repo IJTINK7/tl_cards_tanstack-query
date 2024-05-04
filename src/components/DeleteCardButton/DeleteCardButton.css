@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+.deleteCardButton {
+  all: initial;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgba(75, 78, 91, 0.1019607843);
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-left: 1px solid rgba(255, 44, 71, 0.2);
+  border-bottom: 1px solid rgba(255, 44, 71, 0.2);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deleteCardButton svg use {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: green;
+}
+
+/*# sourceMappingURL=DeleteCardButton.css.map */

@@ -1,0 +1,64 @@
+@import "../../variables";
+
+.cardListWrapper {
+  position: relative;
+  flex: 100;
+
+  .cardListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 8px;
+    max-height: 85vh;
+    flex: 100;
+    gap: $indent-l;
+  }
+
+  .gradient {
+    position: absolute;
+    width: 100%;
+    height: $indent-xxxl;
+    z-index: 1;
+    opacity: 1;
+    transition: 0.15s;
+    pointer-events: none;
+  }
+
+  .topGradient {
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, $gradientColor, rgba(18, 20, 27, 0));
+  }
+
+  .bottomGradient {
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to top, $gradientColor, rgba(18, 20, 27, 0));
+  }
+
+  .invisible {
+    opacity: 0;
+  }
+}
+
+
+.scroll {
+  max-height: calc(85vh);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scroll::-webkit-scrollbar {
+  width: $indent-xxs;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background-color: $scrollbarTrackBackground;
+  border-radius: $indent-xxxxl;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: $scrollbarThumbBackground;
+  border-radius: $indent-xxxxl;
+  height: 15%;
+}

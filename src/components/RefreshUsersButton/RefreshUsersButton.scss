@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.refreshUsersButton {
+  padding: $indent-xxs 0;
+  border: none;
+  background-color: $refreshUsersButtonBackground;
+  cursor: pointer;
+  width: 132px;
+  height: 40px;
+  border-radius: $indent-l;
+  color: $refreshUsersButtonColor;
+  text-align: center;
+
+  &:hover {
+    background-color: $refreshUsersActiveButtonBackground;
+  }
+}

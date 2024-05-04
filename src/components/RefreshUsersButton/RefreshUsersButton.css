@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+.refreshUsersButton {
+  padding: 4px 0;
+  border: none;
+  background-color: #12141B;
+  cursor: pointer;
+  width: 132px;
+  height: 40px;
+  border-radius: 16px;
+  color: #CF7B5A;
+  text-align: center;
+}
+.refreshUsersButton:hover {
+  background-color: #1E2027;
+}
+
+/*# sourceMappingURL=RefreshUsersButton.css.map */

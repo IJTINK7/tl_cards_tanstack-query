@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+// font-family
+
+$fontFamily: Jura, sans-serif;
+
+// font-weight
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+
+// indents
+
+$indent-xxs: 4px;
+$indent-xs: 10px;
+$indent-s: 12px;
+$indent-m: 14px;
+$indent-l: 16px;
+$indent-xl: 20px;
+$indent-xxl: 24px;
+$indent-xxxl: 32px;
+$indent-xxxxl: 100px;
+
+// colors
+
+$rootBackground: #12141B;
+$lightTextColor: #DCD8D3;
+$grayTextColor: #8C8988;
+$inputBackground: #1E2027;
+$refreshUsersButtonBackground: #12141B;
+$refreshUsersActiveButtonBackground: #1E2027;
+$refreshUsersButtonColor: #CF7B5A;
+$cardBackground: #1A1C23;
+$activeCardBorder: #CF7B5A; // #CF7B5A33
+$activeCardBackground: #1E2027;
+$activeCardFullName: #CF7B5A;
+$svgIcon: #FF2C47;
+$svgBorder: #FF2C47; // #FF2C4733
+$svgBackground: #4B4E5B; // #4B4E5B1A
+$gradientColor: #12141B;
+$scrollbarTrackBackground: #7A7A7A;
+$scrollbarThumbBackground: #E8E8E8; // use E8E8E8, cuz E8E8E81A doesn't work
+$statisticsBackground: #1E2027;
+$statisticsLine: #303238;
+
+
+// text
+
+@mixin inputText {
+  color: $grayTextColor;
+  font-size: $indent-l;
+  line-height: $indent-xxl;
+  font-weight: $medium;
+}
+
+@mixin refreshUsersButtonText {
+  color: $refreshUsersButtonColor;
+  font-size: $indent-m;
+  line-height: $indent-xl;
+  font-weight: $semiBold;
+}
+
+@mixin cardFullNameText {
+  font-size: $indent-xl;
+  line-height: $indent-xxl;
+  font-weight: $semiBold;
+}
+
+@mixin activeCardFullNameText {
+  color: $activeCardFullName;
+}
+
+@mixin appLightText {
+  font-family: $fontFamily;
+  color: $lightTextColor;
+  font-size: $indent-m;
+  line-height: $indent-xl;
+  font-weight: $medium;
+}
+
+@mixin appGrayText {
+  color: $grayTextColor;
+  font-size: $indent-s;
+  line-height: $indent-xl;
+  font-weight: $medium;
+}
+
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin cardAndStatisticsAdditionalData {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $indent-s;
+}
+
+
+@mixin statisticsAgeGenderGroupsTitleText {
+  font-size: $indent-l;
+  line-height: $indent-xl;
+  font-weight: $semiBold;
+}

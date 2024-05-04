@@ -1,0 +1,21 @@
+@import "../../variables";
+
+.statisticsContainer {
+  width: 332px;
+  height: 85vh;
+  border-radius: $indent-l;
+  background: $statisticsBackground;
+  padding: $indent-xxl;
+  flex: 1 0 auto;
+
+  .generalUsersCount {
+    margin-bottom: $indent-xxl;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: $statisticsLine;
+    margin-bottom: $indent-xxl;
+  }
+}

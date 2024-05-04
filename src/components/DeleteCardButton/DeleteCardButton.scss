@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.deleteCardButton {
+  all: initial;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #4b4e5b1a;
+  border-top-right-radius: $indent-l;
+  border-bottom-left-radius: $indent-l;
+  border-left: 1px solid #FF2C4733;
+  border-bottom: 1px solid #FF2C4733;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    use {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: green;
+    }
+  }
+}

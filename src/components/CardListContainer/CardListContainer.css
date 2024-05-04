@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+.cardListWrapper {
+  position: relative;
+  flex: 100;
+}
+.cardListWrapper .cardListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 8px;
+  max-height: 85vh;
+  flex: 100;
+  gap: 16px;
+}
+.cardListWrapper .gradient {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  z-index: 1;
+  opacity: 1;
+  transition: 0.15s;
+  pointer-events: none;
+}
+.cardListWrapper .topGradient {
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, #12141B, rgba(18, 20, 27, 0));
+}
+.cardListWrapper .bottomGradient {
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(to top, #12141B, rgba(18, 20, 27, 0));
+}
+.cardListWrapper .invisible {
+  opacity: 0;
+}
+
+.scroll {
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background-color: #7A7A7A;
+  border-radius: 100px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #E8E8E8;
+  border-radius: 100px;
+  height: 15%;
+}
+
+/*# sourceMappingURL=CardListContainer.css.map */

@@ -1,0 +1,26 @@
+@import 'variables';
+
+body {
+  background-color: $rootBackground;
+  padding: $indent-xxxl;
+  overflow-y: hidden;
+
+}
+
+#root {
+  @include appLightText;
+  background-color: $rootBackground;
+  min-height: 100vh;
+  letter-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button, input {
+  font-family: $fontFamily;
+  color: $lightTextColor;
+}
