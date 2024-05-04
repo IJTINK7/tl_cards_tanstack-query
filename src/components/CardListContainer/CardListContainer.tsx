@@ -3,7 +3,6 @@ import {CardList} from "../CardList/CardList.tsx";
 import {memo, useEffect, useRef, useState} from "react";
 
 export const CardListContainer = memo(() => {
-
 	const [scrollTopPosition, setScrollTopPosition] = useState(0);
 	const [scrollBottomPosition, setScrollBottomPosition] = useState(1);
 	const ref = useRef<HTMLDivElement | null>(null);

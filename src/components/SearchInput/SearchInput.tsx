@@ -1,17 +1,14 @@
 import "./SearchInput.scss"
-import {useSelector} from "react-redux";
-import {AppRootStateType, useAppDispatch} from "../../store/store.ts";
-import {ChangeEvent} from "react";
-import {changeSearchTitleActionCreator} from "../../reducers/change-search-title.ts";
+import {ChangeEvent, useState} from "react";
 
 export const SearchInput = () => {
-	const searchTitle = useSelector<AppRootStateType, string>(store => store.searchTitle)
-	const dispatch = useAppDispatch()
-
+	const [inputValue, setInputValue] = useState<string>("")
 	const changeInputValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
-		dispatch(changeSearchTitleActionCreator(e.currentTarget.value))
+		setInputValue(e.currentTarget.value);
 	}
 
-	return <input type="text" className="searchInput" value={searchTitle} placeholder={"Search"}
+	console.log(inputValue)
+
+	return <input type="text" className="searchInput" value={inputValue} placeholder={"Search"}
 	onChange={changeInputValueHandler}/>
 };

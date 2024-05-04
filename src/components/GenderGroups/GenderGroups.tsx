@@ -1,12 +1,19 @@
 import "./GenderGroups.scss"
-import {useSelector} from "react-redux";
-import {AppRootStateType} from "../../store/store.ts";
-import {CardType} from "../../reducers/card-reducer.ts";
+import axios from "axios";
+import {useQuery} from "@tanstack/react-query";
+import {CardType} from "../CardList/CardList.tsx";
 
 export const GenderGroups = () => {
-	const cards = useSelector<AppRootStateType, CardType[]>(store => store.cards);
-	const maleUsersCount = cards.filter(el => el.gender !== "female").length;
-	const femaleUsersCount = cards.filter(el => el.gender !== "male").length;
+	const getCards = () => axios.get('https://randomuser.me/api/?results=500');
+	const { data } = useQuery({
+		queryKey: ['getCards'],
+		queryFn: getCards,
+	});
+
+	const cards = data?.data.results;
+
+	const maleUsersCount = cards?.filter((el: CardType) => el.gender !== "female").length;
+	const femaleUsersCount = cards?.filter((el: CardType) => el.gender !== "male").length;
 
 	return (
 		<div className="genderGroups">

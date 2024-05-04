@@ -1,15 +1,17 @@
 import "./RefreshUsersButton.scss"
-import {useAppDispatch} from "../../store/store.ts";
-import {changeSearchTitleActionCreator} from "../../reducers/change-search-title.ts";
-import {getUsersThunkCreator} from "../../reducers/card-reducer.ts";
+import axios from "axios";
+import {useQuery} from "@tanstack/react-query";
 
 
 export const RefreshUsersButton = () => {
-	const dispatch = useAppDispatch()
+	const getCards = () => axios.get('https://randomuser.me/api/?results=500');
+	const {refetch} = useQuery({
+		queryKey: ['getCards'],
+		queryFn: getCards,
+	});
 
 	const refreshUsersHandler = () => {
-		dispatch(getUsersThunkCreator())
-		dispatch(changeSearchTitleActionCreator(""))
+		refetch()
 	}
 	return (
 		<button className="refreshUsersButton" onClick={refreshUsersHandler}>Refresh Users</button>

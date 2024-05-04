@@ -1,15 +1,21 @@
 import "./AgeGroups.scss"
-import {useSelector} from "react-redux";
-import {AppRootStateType} from "../../store/store.ts";
-import {CardType} from "../../reducers/card-reducer.ts";
 import {memo, useMemo} from "react";
+import axios from "axios";
+import {useQuery} from "@tanstack/react-query";
+import {CardType} from "../CardList/CardList.tsx";
 
 export const AgeGroups = memo(() => {
-	const cards = useSelector<AppRootStateType, CardType[]>(store => store.cards);
+	const getCards = () => axios.get('https://randomuser.me/api/?results=500');
+	const { data } = useQuery({
+		queryKey: ['getCards'],
+		queryFn: getCards,
+	});
+
+	const cards = data?.data.results;
 
 	const countUsersInAgeRange = useMemo(() => {
 		return (minAge: number, maxAge: number) => {
-			const count = cards.filter(card => card.dob.age >= minAge && (maxAge ? card.dob.age <= maxAge : true)).length;
+			const count = cards?.filter((card: CardType) => card.dob.age >= minAge && (maxAge ? card.dob.age <= maxAge : true)).length;
 			return `${count} ${count === 1 ? 'user' : 'users'}`;
 		};
 	}, [cards]);

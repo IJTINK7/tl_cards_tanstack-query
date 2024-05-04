@@ -1,7 +1,7 @@
 import React, {memo, useState} from "react";
 import "./Card.scss"
-import {CardType} from "../../reducers/card-reducer.ts";
 import {DeleteCardButton} from "../DeleteCardButton/DeleteCardButton.tsx";
+import {CardType} from "../CardList/CardList.tsx";
 
 export type DateOptionsType = {
 	day: 'numeric'

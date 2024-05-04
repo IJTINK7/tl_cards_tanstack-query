@@ -1,6 +1,6 @@
-import "./CardListAndStatisticsContainer.scss"
-import {StatisticsContainer} from "../StatisticsContainer/StatisticsContainer.tsx";
 import {CardListContainer} from "../CardListContainer/CardListContainer.tsx";
+import {StatisticsContainer} from "../StatisticsContainer/StatisticsContainer.tsx";
+import "./CardListAndStatisticsContainer.scss"
 
 export const CardListAndStatisticsContainer = () => {
 	return (

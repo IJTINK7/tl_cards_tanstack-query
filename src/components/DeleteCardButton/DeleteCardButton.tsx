@@ -1,9 +1,6 @@
 import "./DeleteCardButton.scss"
 import React, {memo} from "react";
 import trashIconPath from "../../assets/trash-icon.svg"
-import {useAppDispatch} from "../../store/store.ts";
-import {deleteCurrentCardActionCreator} from "../../reducers/card-reducer.ts";
-
 
 type PropsType = {
 	isCardActive: boolean
@@ -11,10 +8,9 @@ type PropsType = {
 }
 
 export const DeleteCardButton: React.FC<PropsType> = memo(({isCardActive, cardId}) => {
-	const dispatch = useAppDispatch()
 
 	const deleteCurrentCardHandler = () => {
-		dispatch(deleteCurrentCardActionCreator(cardId))
+		console.log(cardId)
 	}
 
 	return isCardActive ? (
