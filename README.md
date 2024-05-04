@@ -1,13 +1,13 @@
 # Users - App Web
-# Стэк(React, Redux, TypeScript, SASS/SCSS + Vite)
+# Стэк(React, TanStack Query v5, TypeScript, SASS/SCSS + Vite + Yarn)
 
 ## Склонируйте репозиторий и перейдите к нему:
-### git clone https://github.com/IJTINK7/tmls_cards.git
-### cd tmls_cards
+### git clone https://github.com/IJTINK7/tl_cards_tanstack-query.git
+### cd tl_cards_tanstack-query
 
 ## Установите зависимости
-### npm i
+### yarn install
 
 ## Запускайте =)
-### npm run dev
+### yarn dev
 
